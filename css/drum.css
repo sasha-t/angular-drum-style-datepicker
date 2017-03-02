@@ -1,0 +1,185 @@
+/* main container styles */
+div.drum-wrapper {
+	position: relative;
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    /*width: 30px;*/
+}
+div.drum-wrapper .inner {
+	position: relative;
+	overflow: hidden;
+}
+div.drum-wrapper div.container {
+	position: absolute;
+	width: 100%;
+	top: 48px;
+	left: 0px;
+	-webkit-perspective: 1100px;
+	-moz-perspective: 1100px;
+	-o-perspective: 1100px;
+	perspective: 1100px;
+}
+
+div.drum-wrapper, 
+div.drum-wrapper .inner {
+	height: 120px;
+}
+
+.outside div.drum-wrapper {
+	height: 140px;
+}
+.outside div.drum-wrapper .inner {
+	top: 12px;
+}
+.outside div.drum-wrapper .container {
+	top: 46px;
+}
+
+/* dail styles for mouse controls */
+div.drum-wrapper .dial {
+	position: absolute;
+	width: 100%;
+	height: 48px;
+	background-color: rgba(255, 255, 255, 0.7);
+	display: none;
+}
+
+.outside div.drum-wrapper .dial {
+	height: 58px;
+}
+
+div.drum-wrapper .dial div {
+	width: 20px;
+	height: 10px;
+	margin: 0 auto;
+}
+div.drum-wrapper .dial svg {
+	position: absolute;
+	left: 5px;
+}
+div.drum-wrapper .up {
+	top: 0px;
+}
+div.drum-wrapper .up svg {
+	top: 2px
+}
+div.drum-wrapper .down {
+	bottom: 0px;
+}
+div.drum-wrapper .down svg {
+	bottom: 2px;
+}
+
+/* actual drum styles */
+div.drum {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+div.drum figure {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;  
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+	display: block;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	line-height: 20px;
+	color: black;
+	margin: 0px;
+	padding: 0px 3px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 100%;
+	text-align: left;
+}
+
+div.drum-wrapper div.container, div.drum-wrapper figure {
+	height: 25px;
+	line-height: 25px;
+}
+
+div.col, .result-col {
+	float: left;
+	width: 30px;
+	text-align: center;
+}
+
+.result-col {
+	font-size: 16px;
+}
+
+div.col figure {
+	text-align: center;
+}
+
+.date-time-picker {
+	position: relative;
+}
+
+.picker-label, .picker-label-result {
+    font-style: italic;
+    font-size: 11px;
+}
+
+.picker-label {
+	position: absolute;
+	top: 55px;
+    margin-left: 24px;
+}
+
+div.hidden-block {
+	position: absolute;
+	z-index: 9998;
+	background: #fff;
+	padding: 5px 11px 5px 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-right: 1px solid #e6b65c;
+	border-left: 1px solid #e6b65c;
+	border-bottom: 1px solid #e6b65c;
+	border-top: 1px solid #eeeeee;
+	top: 23px;
+}
+
+#triangle-up {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid red;
+}
+
+.date-time-picker .result {
+	cursor: pointer;
+	text-align: center;
+	outline: none;
+	width: 108px;
+	border: 1px solid #eee;
+    padding-left: 7px;
+    height: 24px;
+}
+
+.current-line-border-bottom, .current-line-border-top {
+	background: #e5e5e5;
+	height: 1px;
+	width: 88px;
+	position: absolute;
+	left: 9px;
+}
+.current-line-border-top { top: 54px; }
+.current-line-border-bottom { top: 76px; }

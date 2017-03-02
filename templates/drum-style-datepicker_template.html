@@ -1,0 +1,35 @@
+<div class="date-time-picker">
+	<div class="result">
+		<div class="result-col">
+			{{ field.days }}<span class="picker-label-result">д</span>
+		</div>
+		<div class="result-col">
+			{{ field.hours }}<span class="picker-label-result">ч</span>
+		</div>
+		<div class="result-col">
+			{{ field.minutes }}<span class="picker-label-result">м</span>
+		</div>
+	</div>
+	<div class="hidden-block">
+		<div class="current-line-border-top"></div>
+		<div class="current-line-border-bottom"></div>
+		<div class="col">
+			<div class="picker-label">д</div>
+			<select ng-model="field.days" name="days" label="дни">
+				<option ng-repeat="i in list.days" value="{{ i }}">{{ i }}</option>
+			</select>
+		</div>
+		<div class="col">
+			<div class="picker-label">ч</div>
+			<select ng-model="field.hours" name="hours" label="часы">
+				<option ng-repeat="i in list.hours" value="{{ i }}">{{ i }}</option>
+			</select>
+		</div>
+		<div class="col">
+			<div class="picker-label">м</div>
+			<select ng-model="field.minutes" name="minutes" label="минуты">
+				<option ng-repeat="i in list.minutes" value="{{ i }}">{{ i }}</option>
+			</select>
+		</div>
+	</div>
+</div>
